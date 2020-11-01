@@ -48,7 +48,7 @@ class Populacao:
 
         """
 
-        u, indices = unique(self.populacao, return_index=True, axis=0)
+        u, indices = unique(self.populacao, return_inverse=True, axis=0)
         valores = self.avaliacao(u)
         valores = valores[indices]
         ind = argsort(valores)
